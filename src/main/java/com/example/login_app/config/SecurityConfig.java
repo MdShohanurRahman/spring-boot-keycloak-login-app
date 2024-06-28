@@ -109,7 +109,6 @@ class SecurityConfig {
     }
 
     Collection<GrantedAuthority> generateAuthoritiesFromClaim(Collection<String> roles) {
-        System.out.println();
         return roles.stream().map(role -> new SimpleGrantedAuthority("ROLE_" + role)).collect(
                 Collectors.toList());
     }
